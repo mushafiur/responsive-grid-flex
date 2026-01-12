@@ -38,7 +38,17 @@
 
         @media screen and (max-width:576px){
             .container{
-                display: block;
+            gap: 5px;
+            grid-template-columns: repeat(2, 1fr);
+            /* grid-template-rows: repeat(6, 200px) ; */
+            }
+            .big-layout, .normal-layout, .wide-layout, .default-layout{
+            grid-column: span 1;
+            grid-row: span 1;
+            }
+
+            .no-display{
+                display: none;
             }
         }
     </style>
@@ -75,7 +85,7 @@
         <div class="default-layout">
             <img src="./images/G.jpg" alt="">
         </div>
-        <div class="default-layout">
+        <div class="default-layout no-display">
             <img src="./images/G.jpg" alt="">
         </div>
 
